@@ -4,10 +4,11 @@ import { Modal, Button, Card } from '@/components/ui';
 import { EMPLOYEES, ASSET_CONDITIONS, DEPARTMENTS } from '@/utils/mockData';
 import { useToast } from '@/hooks/useToast';
 
-interface AddAssetModalProps {
+export interface AddAssetModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
+
 
 interface AssetFormData {
   assetName: string;

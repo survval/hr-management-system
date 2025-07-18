@@ -27,7 +27,9 @@ export const getConditionColor = (condition: string): string => {
   return conditionColors[condition.toLowerCase()] || 'bg-gray-100 text-gray-800';
 };
 
-export const getStatusVariant = (status: string): 'success' | 'warning' | 'error' | 'info' | 'neutral' => {
+export const getStatusVariant = (
+  status: string
+): 'success' | 'warning' | 'error' | 'info' | 'neutral' => {
   switch (status.toLowerCase()) {
     case 'active':
     case 'approved':
@@ -48,3 +50,24 @@ export const getStatusVariant = (status: string): 'success' | 'warning' | 'error
     default:
       return 'neutral';
   }
+};
+
+export const getEventEmoji = (type: string): string => {
+  switch (type.toLowerCase()) {
+    case 'birthday':
+      return '🎂';
+    case 'anniversary':
+      return '🎉';
+    case 'meeting':
+      return '📅';
+    case 'holiday':
+      return '🏖️';
+    case 'training':
+      return '📘';
+    case 'event':
+      return '📣';
+    default:
+      return '🔔';
+  }
+};
+

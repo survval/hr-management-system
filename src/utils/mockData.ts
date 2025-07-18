@@ -1,3 +1,4 @@
+import { Briefcase, Calendar, Home, Users } from 'lucide-react';
 import { User, Employee, LeaveRequest, InventoryItem, Activity, Event } from './types';
 
 export const CURRENT_USER: User = {
@@ -276,3 +277,17 @@ export const TIME_TRACKING_DATA = {
     absentDays: 0
   }
 };
+
+export const ASSET_CONDITIONS = [
+  'Excellent',
+  'Good',
+  'Fair',
+  'Poor'
+];
+
+export const NAVIGATION_ITEMS = [
+  { id: 'dashboard', label: 'Dashboard', icon: Home },
+  { id: 'leave', label: 'Leave', icon: Calendar },
+  { id: 'employees', label: 'Employees', icon: Users },
+  { id: 'inventory', label: 'Inventory', icon: Briefcase }
+];

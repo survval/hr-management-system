@@ -7,7 +7,8 @@ import { CURRENT_USER } from '@/utils/mockData';
 export const ProfileCard: React.FC = () => {
   return (
     <Card>
-      <div className="text-center">
+      <div className="relative text-center">
+        <div className="relative inline-block">
           <Image
             src={CURRENT_USER.photo}
             alt={CURRENT_USER.name}
@@ -20,10 +21,11 @@ export const ProfileCard: React.FC = () => {
             <Camera className="w-4 h-4" />
           </button>
         </div>
+
         <h3 className="mt-4 text-lg font-semibold text-gray-900">{CURRENT_USER.name}</h3>
         <p className="text-sm text-gray-600">{CURRENT_USER.role}</p>
         <p className="text-sm text-gray-500">{CURRENT_USER.department}</p>
-        
+
         <div className="mt-4 space-y-2">
           <div className="flex items-center justify-center space-x-2 text-sm text-gray-600">
             <Mail className="w-4 h-4" />
